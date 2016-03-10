@@ -1,12 +1,15 @@
-from readtest import *
+#from readtest import *
+from CardList import CardList
+from Reader import Reader
+reader = Reader()
+cardList = CardList()
 
 while True:
-        print 'Put the card in the reader'
-        card=readCard()
-        a=raw_input('Specify Spotify URI')
-        if a=="q":
+        print 'Place the card in the reader'
+        card = reader.readCard()
+        plist=raw_input('Specify Spotify URI, q to quit')
+        if plist=="q":
                 break
-        f=open('cardList.csv','a')
-        f.write(card+','+a+'\n')
+	cardList.addPlaylist(card, plist)
 print "Exiting"
 

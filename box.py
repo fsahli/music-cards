@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 from mpd import MPDClient
-from readtest import *
+#from readtest import *
 import re
 from CardList import CardList
 from Reader import Reader
